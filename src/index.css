@@ -1,4 +1,10 @@
 body {
   margin: 0;
+  background-color: #252525;
+  color: white;
   font-family: "Fira Mono", monospace;
+}
+
+p {
+  margin: 0.5em 0;
 }
