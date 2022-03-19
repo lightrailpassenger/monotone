@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 
+import { Remarkable } from 'remarkable';
 import { useParams } from "react-router-dom";
+
+const renderer = new Remarkable();
 
 export default function TutorialPage() {
   const { id } = useParams();
@@ -13,13 +16,12 @@ export default function TutorialPage() {
           `./tutorials/${id}.md`
         );
 
-        // TODO: Render markdown
         setMarkdown(markdownContent);
       } catch {
-        setMarkdown("Error");
+        setMarkdown("");
       }
     })();
   }, [id]);
 
-  return <div>{markdown}</div>;
+  return <div dangerouslySetInnerHTML={{ __html: renderer.render(markdown) }} />
 }
