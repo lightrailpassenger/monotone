@@ -8,8 +8,16 @@ export default function TutorialPage() {
 
   useEffect(() => {
     (async () => {
-      const markdownContent = await import(`./tutorials/${id}.md`);
-      setMarkdown(markdown);
+      try {
+        const { default: markdownContent } = await import(
+          `./tutorials/${id}.md`
+        );
+
+        // TODO: Render markdown
+        setMarkdown(markdownContent);
+      } catch {
+        setMarkdown("Error");
+      }
     })();
   }, [id]);
 
