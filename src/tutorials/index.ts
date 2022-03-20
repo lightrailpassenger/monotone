@@ -1,15 +1,9 @@
 const index = [
   {
-    id: 2,
-    title: "Welcome",
-    description: "This is the second entry.",
-    createdAt: new Date(),
-  },
-  {
     id: 1,
-    title: "Welcome",
-    description: "This is the first entry.",
-    createdAt: new Date(),
+    title: "Multicolumn indexes in PostgreSQL",
+    description: "Some (informal) benchmarks",
+    createdAt: new Date(1647771024825),
   },
 ] as const;
 
