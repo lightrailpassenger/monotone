@@ -2,6 +2,7 @@
   "name": "monotone",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://lightrailpassenger.github.io/monotone",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^12.0.0",
@@ -21,6 +22,7 @@
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
+    "deploy": "gh-pages -d build",
     "test": "react-app-rewired test",
     "eject": "react-app-rewired eject"
   },
@@ -44,6 +46,7 @@
   },
   "devDependencies": {
     "@types/remarkable": "^2.0.3",
+    "gh-pages": "^3.2.3",
     "prettier": "^2.6.0",
     "react-app-rewired": "^2.2.1",
     "sass": "^1.49.9"
