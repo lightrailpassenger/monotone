@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/monotone/static/css/main.897fcdc2.css",
+    "main.js": "/monotone/static/js/main.8848f9eb.js",
+    "static/js/993.8ba0cff0.chunk.js": "/monotone/static/js/993.8ba0cff0.chunk.js",
+    "index.html": "/monotone/index.html",
+    "main.897fcdc2.css.map": "/monotone/static/css/main.897fcdc2.css.map",
+    "main.8848f9eb.js.map": "/monotone/static/js/main.8848f9eb.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.897fcdc2.css",
+    "static/js/main.8848f9eb.js"
+  ]
+}

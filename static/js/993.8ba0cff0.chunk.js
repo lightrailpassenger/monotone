@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmonotone=self.webpackChunkmonotone||[]).push([[993],{993:function(e){e.exports="# Test 1\n"}}]);
