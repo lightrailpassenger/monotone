@@ -18,12 +18,14 @@ export default function TutorialRow({
   createdAt,
 }: TutorialRowProps) {
   const navigate = useNavigate();
-  const handleClick = useCallback(() => {
+  const handleClick = useCallback((event) => {
+    event.preventDefault();
+
     navigate(`/tutorial/${id}`);
   }, [navigate, id]);
 
   return (
-    <a className={styles.row} onClick={handleClick}>
+    <a href={`/tutorial/${id}`} className={styles.row} onClick={handleClick}>
       <p className={styles.title}>{title}</p>
       <p className={styles.description}>{description}</p>
       <p className={styles.createdAt}>Created: {`${createdAt}`}</p>
