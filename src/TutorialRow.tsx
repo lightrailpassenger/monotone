@@ -18,11 +18,14 @@ export default function TutorialRow({
   createdAt,
 }: TutorialRowProps) {
   const navigate = useNavigate();
-  const handleClick = useCallback((event) => {
-    event.preventDefault();
+  const handleClick = useCallback(
+    (event) => {
+      event.preventDefault();
 
-    navigate(`/tutorial/${id}`);
-  }, [navigate, id]);
+      navigate(`/tutorial/${id}`);
+    },
+    [navigate, id]
+  );
 
   return (
     <a href={`/tutorial/${id}`} className={styles.row} onClick={handleClick}>
