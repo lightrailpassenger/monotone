@@ -10,17 +10,27 @@ export default function TutorialPage() {
   const [markdown, setMarkdown] = useState<string>("");
 
   useEffect(() => {
-    (async () => {
+    let isIgnored = false;
+    const load = async () => {
       try {
         const { default: markdownContent } = await import(
           `./tutorials/${id}.md`
         );
 
-        setMarkdown(markdownContent);
+        if (!isIgnored) {
+          setMarkdown(markdownContent);
+        }
       } catch {
-        setMarkdown("");
+        if (!isIgnored) {
+          setMarkdown("");
+        }
       }
-    })();
+    };
+    load();
+
+    return () => {
+      isIgnored = true;
+    };
   }, [id]);
 
   return (
